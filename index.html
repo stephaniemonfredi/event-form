@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Ticket</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="form.css" />
+  <script src="form.js" defer></script>
+</head>
+<body>
+  <main class="wrapper">
+    <h1>Event Ticket</h1>
+
+    <form id="eventForm">
+      <div class="field">
+        <label for="firstName">First Name</label>
+        <input id="firstName" name="firstName" type="text" required />
+      </div>
+
+      <div class="field">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" name="lastName" type="text" required />
+      </div>
+
+      <div class="field full">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+      <div class="field">
+        <label for="choose">Type</label>
+        <select
+          id="choose"
+          name="choose"
+          aria-controls="notesContainer"
+          required>
+          <option value="">Choose one</option>
+          <option value="student">Student</option>
+          <option value="guest">Guest</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="availableDate">Event Date</label>
+        <input id="availableDate" name="availableDate" type="date" required />
+      </div>
+
+      <div id="notesContainer" class="field full" hidden>
+        <label for="notes">Access Code</label>
+        <input id="notes" name="notes" type="text" />
+      </div>
+
+      <div id="studentID" class="field full" hidden>
+        <label for="ID">Student ID #</label>
+        <input id="ID" name="ID" type="text" />
+      </div>
+
+      <button class="full" type="submit">Submit Preferences</button>
+    </form>
+
+    <section id="output" aria-live="polite"></section>
+  </main>
+</body>
+</html>
+          
